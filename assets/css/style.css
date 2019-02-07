@@ -1,0 +1,29 @@
+body {
+    /* Photo by Atlas Green on Unsplash */
+    background-image: url(../images/crystalbackground.jpg);
+    background-size: contain;
+}
+
+#header {
+    background: #fff;
+}
+
+#directions-text {
+    background: #00ffff;
+}
+
+#target-display {
+    background: #ffa500;
+}
+
+#win-loss-display {
+    background: #ff00ff;
+}
+
+#scoreDisplay {
+    background: #66cdaa;
+}
+
+#currentScore {
+    background: #ff7f50;
+}

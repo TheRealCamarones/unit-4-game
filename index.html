@@ -37,14 +37,13 @@
         <div class="row">
             <div class="col-6 col-3-md" id="target-display">
                 <!-- Pretty sure we leave this empty for now and then attach the number to the ID element later in the DOM -->
-                <!-- but we do need to have a header tag with a specific ID to assign it to? -->
-                <h2 id="random-number">
-                </h2>
+                <!-- Placeholder value, pretty sure this will get swapped out -->
+                <h3>0</h3>>
             </div>
             <div class="col-6 col-3-md" id="win-loss-display">
-                <p>Wins: </p>
+                <h3>Wins: </3>
                 <br>
-                <p>Losses: </p>
+                <h3>Losses: </h3>
             </div>
         </div>
     </div>
@@ -55,6 +54,23 @@
             </div>
         </div>
         <div class="row">
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <!-- don't need an ID because this will be static the whole time, but I'm probably gonna want to apply style to it later, idiot -->
+            <div class="col-12 col-md-3" id="scoreDisplay">
+                <h3>Your total score is: </h3>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <!-- This will be empty until we assign a change to it based upon crystal guessed -->
+            <div class="col-12 col-md-6" id="currentScore">
+                <!-- Placeholder value, pretty sure this will get swapped out -->
+                <h3>-1</h3>
+            </div>
         </div>
     </div>
 
