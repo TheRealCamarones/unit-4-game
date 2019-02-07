@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crystal Guess Game</title>
+    <!-- link to Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!-- link to my custom css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4" id="header">
+                <h1>Crystal Collector</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6" id="directions-text">
+                <p>You will be given a random number at the start of the game</p>
+                <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your score.</p>
+                <p>You win the game by matching your total score the the random number. You lose if your score goes over the number. Like blackjack.</p>
+                <p>The value of each crystal is hidden and only revealed by clicking on it.</p>
+                <p>Each time when the game starts the game will change the values of each crystal.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-3-md" id="target-display">
+                <!-- Pretty sure we leave this empty for now and then attach the number to the ID element later in the DOM -->
+                <!-- but we do need to have a header tag with a specific ID to assign it to? -->
+                <h2 id="random-number">
+                </h2>
+            </div>
+            <div class="col-6 col-3-md" id="win-loss-display">
+                <p>Wins: </p>
+                <br>
+                <p>Losses: </p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6" id="crystal-display">
+                <!-- We'll come back to this later to target it and add crystal images -->
+            </div>
+        </div>
+        <div class="row">
+        </div>
+    </div>
+
+    <!-- link to jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.7.0/d3.min.js"></script>
+</body>
+
+</html>
