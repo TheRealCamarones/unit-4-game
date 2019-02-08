@@ -11,7 +11,9 @@
         crossorigin="anonymous">
     <!-- link to my custom css -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
+    <!-- link to jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+   
 </head>
 
 <body>
@@ -37,8 +39,6 @@
         <div class="row">
             <div class="col-6 col-3-md" id="target-display">
                 <!-- Pretty sure we leave this empty for now and then attach the number to the ID element later in the DOM -->
-                <!-- Placeholder value, pretty sure this will get swapped out -->
-                <h3>0</h3>>
             </div>
             <div class="col-6 col-3-md" id="win-loss-display">
                 <h3>Wins: </3>
@@ -50,8 +50,11 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-6" id="crystal-display">
-                <!-- We'll come back to this later to target it and add crystal images -->
+                <!-- Kinda like this image, it's a little different and unique but on theme, sizing it here for now -->
+                <img src="assets/images/cyrstal-image.jpg" class="crystal-image" alt="crystal" width="250px" height="250px">
+                <!-- Will come back to this later to target it and add crystal images -->
             </div>
+
         </div>
         <div class="row">
         </div>
@@ -68,14 +71,11 @@
         <div class="row">
             <!-- This will be empty until we assign a change to it based upon crystal guessed -->
             <div class="col-12 col-md-6" id="currentScore">
-                <!-- Placeholder value, pretty sure this will get swapped out -->
-                <h3>-1</h3>
             </div>
         </div>
     </div>
-
-    <!-- link to jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.7.0/d3.min.js"></script>
+     <!-- And then link to my JavaScript file -->
+     <script src="assets/javascript/game.js"></script>
 </body>
 
 </html>
