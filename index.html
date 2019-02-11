@@ -37,10 +37,11 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-6 col-3-md" id="target-display">
+            <div class="col-6 col-3-md">
+                <h2 id="target-display"></h2>
                 <!-- Pretty sure we leave this empty for now and then attach the number to the ID element later in the DOM -->
             </div>
-            <div class="col-6 col-3-md" id="win-loss-display">
+            <div class="col-3" id="win-loss-display">
                 <h3>Wins: </3>
                 <br>
                 <h3>Losses: </h3>
@@ -49,10 +50,13 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-6" id="crystal-display">
+            <div class="col-12" id="crystal-display">
                 <!-- Kinda like this image, it's a little different and unique but on theme, sizing it here for now -->
                 <img src="assets/images/cyrstal-image.jpg" class="crystal-image" alt="crystal">
-                <!-- Will come back to this later to target it and add crystal images -->
+                <img src="assets/images/cyrstal-image.jpg" class="crystal-image" alt="crystal">
+                <img src="assets/images/cyrstal-image.jpg" class="crystal-image" alt="crystal">
+                <img src="assets/images/cyrstal-image.jpg" class="crystal-image" alt="crystal">
+                <!-- obviously this is DRY code, probably will come back and simplify later -->
             </div>
 
         </div>
@@ -63,15 +67,15 @@
         <div class="row">
             <!-- don't need an ID because this will be static the whole time, but I'm probably gonna want to apply style to it later, idiot -->
             <div class="col-12 col-md-3" id="scoreDisplay">
-                <h3>Your total score is: </h3>
+                <h2>Your total score is: </h2>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="row">
             <!-- This will be empty until we assign a change to it based upon crystal guessed -->
-            <div class="col-12 col-md-6" id="currentScore">
-                <h3>0</h3>
+            <div class="col-12 col-md-6">
+                <h2 id="currentScore"></h2>
             </div>
         </div>
     </div>
