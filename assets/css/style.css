@@ -4,10 +4,6 @@ body {
     background-size: contain;
 }
 
-h1, h2 {
-    color: #fff;
-}
-
 .crystal-image {
     width: 20%;
     height: 250px;
@@ -32,9 +28,5 @@ h1, h2 {
 }
 
 #score-display {
-    background: #ff7f50;
-}
-
-#static-display {
     background: #ff7f50;
 }

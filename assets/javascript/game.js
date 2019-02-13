@@ -8,9 +8,12 @@ $(document).ready(function () {
     // create a random number to target between 19 and 120
     var targetNumber = Math.floor(Math.random() * 120 + 19);
     // show the number to the user from the start
-    $("#target-display").text(targetNumber);
+    $("#target-display").text("Target Number: " + targetNumber);
     // show the counter to the user from the start
-    $("#score-display").text(counter);
+    $("#score-display").text("Your Total Score Is: " + counter);
+    // might as well show them the wins and losses counters from the start as well
+    $("#wins-text").text("Wins: " + wins);
+    $("#losses-text").text("Losses: " + losses);
     // I guess for now just to make it work I could just assign each photo a spot in an array and then reference it down in the loop to give them value
     var crystalChoices = [$("#first-crystal"), $("#second-crystal"), $("#third-crystal"), $("#fourth-crystal")]
     // make an array to fill with potential crystal numbers, slightly worried about the possibility of random numbers making the game unwinnable, but we'll see
@@ -28,6 +31,8 @@ $(document).ready(function () {
     }
 
     function gameLoss() {
+        alert("Sorry, you lose, try again!");
+        losses++;
 
     }
 
@@ -43,8 +48,8 @@ $(document).ready(function () {
         // and now that we have a different number to increase the counter by, we go up by the individual contextual value
         counter += crystalValue;
         // we don't need this test in the log anymore, so we switch it to display the counter
-        $("#score-display").text(counter);
+        $("#score-display").text("Your Total Score Is: " + counter);
         // show the target number in the target-display div
-        $("#target-display").text(targetNumber);
+        $("#target-display").text("Target Number: " + targetNumber);
     });
 });
