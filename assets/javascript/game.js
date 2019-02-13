@@ -25,31 +25,63 @@ $(document).ready(function () {
         // target the pictures one at a time to assign the values as they are added to the array
         crystalChoices[i].attr("data-crystal-value", valueOptions[i]);
     }
-    // a couple functions I'm going to need
+    // this function is key because it will enable us to reset the in game statistics without having to refresh the page
     function reset() {
-
+        // reset the random number variable
+        targetNumber = Math.floor(Math.random() * 120 + 19);
+        // display the new randomly assigned target number
+        $("#target-display").text("Target Number: " + targetNumber);
+        // refill my array with new randomly assigned numbers for each crystal
+        for (var i = 0; i < 4; i++) {
+            valueOptions[i] = Math.floor(Math.random() * 12 + 1)
+            crystalChoices[i].attr("data-crystal-value", valueOptions[i]);
+        };
+        counter = 0;
+        $("#score-display").text("Your Total Score Is: " + counter);
     }
-
+    // the gameLoss function will run in the conditional at the bottom
     function gameLoss() {
+        // alert the user they lost
         alert("Sorry, you lose, try again!");
+        // increment losses
         losses++;
-
+        // display the new losses total
+        $("#losses-text").text("Losses: " + losses);
+        // run the reset function
+        reset();
     }
 
+    // gameWin will run in the conditional at the bottom
     function gameWin() {
-
+        // alert the user they won with a fun congratulatory message
+        alert("Winner, winner, chicken dinner! You got " + targetNumber + ". Play again!");
+        // increment wins
+        wins++;
+        // display the new win total
+        $("#wins-text").text("Wins: " + wins);
+        // run the reset function
+        reset();
     }
     // on the click of the crystal image
     $(".crystal-image").on("click", function () {
+
         // create a new variable that holds the value of the clicked crystal
         // this knows contextually we mean what was clicked, attr takes the value and assigns it
         var crystalValue = ($(this).attr("data-crystal-value"));
         crystalValue = parseInt(crystalValue)
+
         // and now that we have a different number to increase the counter by, we go up by the individual contextual value
         counter += crystalValue;
         // we don't need this test in the log anymore, so we switch it to display the counter
         $("#score-display").text("Your Total Score Is: " + counter);
         // show the target number in the target-display div
         $("#target-display").text("Target Number: " + targetNumber);
+        // set a conditional for the game to be won or lost
+        // it will only run on a win or loss, so as long as the counter is under the target number this won't even be noticed
+        if (counter > targetNumber) {
+            gameLoss()
+        } else if (counter === targetNumber) {
+            gameWin()
+        }
     });
 });
