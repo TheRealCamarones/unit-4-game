@@ -4,31 +4,37 @@ body {
     background-size: contain;
 }
 
+h1, h2 {
+    color: #fff;
+}
+
 .crystal-image {
     width: 20%;
     height: 250px;
+    padding: 10px;
 }
 
 #header {
-    background: #fff;
+    background: #ff7f50;
+    color: black;
 }
 
 #directions-text {
-    background: #00ffff;
-}
-
-#target-display {
-    background: #ffa500;
-}
-
-#win-loss-display {
-    background: #ff00ff;
-}
-
-#scoreDisplay {
     background: #66cdaa;
 }
 
-#currentScore {
+#target-display {
+    background: #ff7f50;
+}
+
+#win-loss-display {
+    background: #66cdaa;
+}
+
+#score-display {
+    background: #ff7f50;
+}
+
+#static-display {
     background: #ff7f50;
 }
