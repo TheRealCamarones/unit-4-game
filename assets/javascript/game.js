@@ -50,7 +50,6 @@ $(document).ready(function () {
         // run the reset function
         reset();
     }
-
     // gameWin will run in the conditional at the bottom
     function gameWin() {
         // alert the user they won with a fun congratulatory message
@@ -64,12 +63,10 @@ $(document).ready(function () {
     }
     // on the click of the crystal image
     $(".crystal-image").on("click", function () {
-
         // create a new variable that holds the value of the clicked crystal
         // this knows contextually we mean what was clicked, attr takes the value and assigns it
         var crystalValue = ($(this).attr("data-crystal-value"));
         crystalValue = parseInt(crystalValue)
-
         // and now that we have a different number to increase the counter by, we go up by the individual contextual value
         counter += crystalValue;
         // we don't need this test in the log anymore, so we switch it to display the counter
