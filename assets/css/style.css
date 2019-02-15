@@ -5,9 +5,9 @@ body {
 }
 
 .crystal-image {
-    width: 20%;
-    height: 250px;
-    padding: 10px;
+    width: 22%;
+    height: 200px;
+    /* padding: 10px; */
 }
 
 #header {
