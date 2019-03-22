@@ -14,11 +14,11 @@ $(document).ready(function () {
     // might as well show them the wins and losses counters from the start as well
     $("#wins-text").text("Wins: " + wins);
     $("#losses-text").text("Losses: " + losses);
-    // I guess for now just to make it work I could just assign each photo a spot in an array and then reference it down in the loop to give them value
+    // assign each photo a spot in an array and then reference it down in the loop to give them value
     var crystalChoices = [$("#first-crystal"), $("#second-crystal"), $("#third-crystal"), $("#fourth-crystal")]
-    // make an array to fill with potential crystal numbers, slightly worried about the possibility of random numbers making the game unwinnable, but we'll see
+    // make an array to fill with potential crystal numbers, potentially random numbers could make the game unwinnable,
+    // but in my hundreds of test runs I've only had that happen once or twice, acceptable
     var valueOptions = []
-    // and then fill the array up with randos
     for (var i = 0; i < 4; i++) {
         // four random numbers between 1 and 12 in the array
         valueOptions[i] = Math.floor(Math.random() * 12 + 1);
